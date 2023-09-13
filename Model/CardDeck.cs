@@ -14,7 +14,7 @@ namespace PlayingCardService.CardDeck
         private readonly List<Card> cards = new List<Card>();
 
         // seeding random with current time to make it random on each run.
-        private readonly Random random = new Random();
+        private readonly Random random = new Random(DateTime.Now.ToString().GetHashCode());
 
         public CardDeck()
         {
